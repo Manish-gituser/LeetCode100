@@ -1,5 +1,5 @@
 #1464. Maximum Product of Two Elements in an Array
-
+#without inbuilt sorting function
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         l=len(nums)
@@ -28,6 +28,16 @@ class Solution:
             
         #print(maxi,counter)    
         return ((maxi-1) * (counter-1))    
+
+
+
+
+#with inbuilt sorting function
+    def maxProduct(self, nums: List[int]) -> int:
+        l=len(nums)
+        res=0
+        nums.sort()
+        return((nums[-1]-1)*(nums[-2]-1))
 
 
 
