@@ -1,0 +1,14 @@
+1672. Richest Customer Wealth
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        max=0
+        sum=0
+        for i in accounts:
+            for j in i:
+                sum=sum+j
+            if max<sum:
+                max=sum
+            sum=0
+            
+        return max
+        
