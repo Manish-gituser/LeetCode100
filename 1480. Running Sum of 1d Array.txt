@@ -1,0 +1,12 @@
+1480. Running Sum of 1d Array
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        list1=[]
+        l=len(nums)
+        sum=nums[0]
+        list1.append(nums[0])
+        for i in range(1,l):
+            sum+=nums[i]
+            list1.append(sum)
+        return list1
+
